@@ -1,1 +1,1024 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Asad Javed | Social Media & Digital Content Creator</title>
+
+  <meta name="description" content="Asad Javed - Social Media & Digital Content Creator specializing in social media content, graphic design, video editing and digital marketing.">
+
+  <style>
+    :root {
+      --bg: #f8f7fc;
+      --surface: #ffffff;
+      --text: #17151f;
+      --muted: #686572;
+      --primary: #7c3aed;
+      --secondary: #ec4899;
+      --accent: #f97316;
+      --border: #e9e5f0;
+      --dark: #17151f;
+      --radius: 22px;
+      --shadow: 0 15px 45px rgba(23, 21, 31, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(248, 247, 252, 0.92);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #4b4754;
+      transition: 0.25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 100px 0 80px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      background: #eee7ff;
+      color: var(--primary);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 6vw, 78px);
+      line-height: 0.98;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.25s;
+    }
+
+    .btn-primary {
+      background: var(--dark);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      background: var(--primary);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      background: white;
+    }
+
+    .btn-outline:hover {
+      transform: translateY(-3px);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .hero-card {
+      position: relative;
+      min-height: 390px;
+      border-radius: 35px;
+      background: linear-gradient(145deg, #eee7ff, #ffe7f1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-card::before,
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(2px);
+    }
+
+    .hero-card::before {
+      width: 190px;
+      height: 190px;
+      background: rgba(124, 58, 237, 0.25);
+      top: -50px;
+      right: -40px;
+    }
+
+    .hero-card::after {
+      width: 150px;
+      height: 150px;
+      background: rgba(236, 72, 153, 0.2);
+      bottom: -40px;
+      left: -30px;
+    }
+
+    .profile-placeholder {
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 64px;
+      font-weight: 800;
+      box-shadow: 0 20px 50px rgba(124, 58, 237, 0.25);
+      z-index: 2;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 85px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title span {
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      margin: 8px 0 12px;
+      letter-spacing: -1.5px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      max-width: 650px;
+      margin: auto;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 28px;
+      border-radius: var(--radius);
+      transition: 0.25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f0eaff;
+      color: var(--primary);
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* WORK */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .work-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: 0.25s;
+    }
+
+    .work-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .work-image {
+      height: 230px;
+      background: linear-gradient(135deg, #eee7ff, #ffe7f1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .work-content {
+      padding: 20px;
+    }
+
+    .work-content h3 {
+      margin-bottom: 5px;
+    }
+
+    .work-content p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* EXPERIENCE */
+    .experience {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .experience-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      padding: 28px;
+      border-radius: 18px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .experience-item h3 {
+      font-size: 22px;
+    }
+
+    .experience-item .date {
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 700;
+      margin: 5px 0 15px;
+    }
+
+    .experience-item ul {
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    /* SKILLS */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .skill {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .skill:hover {
+      background: var(--dark);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* CERTIFICATES */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .cert-card {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 25px;
+      border-radius: var(--radius);
+      text-align: center;
+    }
+
+    .cert-icon {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .cert-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* PLATFORMS */
+    .platforms {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .platform {
+      padding: 14px 22px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      background: var(--dark);
+      color: white;
+      border-radius: 32px;
+      padding: 55px;
+      text-align: center;
+    }
+
+    .contact-box p {
+      color: #c5c1cb;
+      max-width: 600px;
+      margin: 12px auto 25px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .contact-links a {
+      background: white;
+      color: var(--dark);
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .contact-links a:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 30px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid,
+      .work-grid,
+      .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero {
+        padding-top: 70px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero-card {
+        min-height: 300px;
+      }
+
+      .profile-placeholder {
+        width: 160px;
+        height: 160px;
+        font-size: 48px;
+      }
+
+      .services-grid,
+      .work-grid,
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .contact-box {
+        padding: 35px 22px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="#home" class="logo">Asad<span>.</span></a>
+
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <div class="container hero-grid">
+
+      <div>
+        <span class="badge">SOCIAL MEDIA • DIGITAL CONTENT • CREATIVE</span>
+
+        <h1>
+          Hi, I'm <span class="gradient-text">Asad Javed</span>
+        </h1>
+
+        <h2>Social Media & Digital Content Creator</h2>
+
+        <p>
+          I create engaging social media content, promotional graphics,
+          short-form videos and digital creatives that help brands connect
+          with their audience.
+        </p>
+
+        <div class="buttons">
+          <a href="#work" class="btn btn-primary">View Work Samples</a>
+
+          <a href="Asad_Javed_Social media_CV.pdf"
+             class="btn btn-outline"
+             target="_blank">
+            Download CV
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="profile-placeholder">AJ</div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+
+      <div class="section-title">
+        <span>ABOUT ME</span>
+        <h2>Creative content with purpose.</h2>
+        <p>
+          A brief introduction about my background, creative approach and
+          digital content experience.
+        </p>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="card">
+          <h3>Who I Am</h3>
+          <p>
+            I am an Information Technology graduate with a strong interest
+            in social media content creation, graphic design, video editing
+            and digital communication.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>What I Do</h3>
+          <p>
+            I create social media posts, promotional designs, short videos,
+            banners and other digital content for businesses, organizations
+            and online platforms.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+
+      <div class="section-title">
+        <span>SERVICES</span>
+        <h2>What I Can Do</h2>
+        <p>
+          Creative and practical digital content services for modern brands.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="icon">📱</div>
+          <h3>Social Media Content</h3>
+          <p>
+            Engaging posts and content designed for Facebook, Instagram,
+            TikTok and other platforms.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">🎨</div>
+          <h3>Graphic Design</h3>
+          <p>
+            Social media graphics, banners, posters and promotional
+            creatives.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">🎬</div>
+          <h3>Video Editing</h3>
+          <p>
+            Short-form videos, reels, promotional videos and social media
+            content.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">📣</div>
+          <h3>Digital Promotion</h3>
+          <p>
+            Creative promotional content designed to improve online
+            visibility.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">💬</div>
+          <h3>Social Media Management</h3>
+          <p>
+            Content publishing, basic audience communication and social
+            media support.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">✨</div>
+          <h3>Creative Content</h3>
+          <p>
+            Custom digital creatives tailored to a brand, campaign or
+            promotional goal.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK SAMPLES -->
+  <section id="work">
+    <div class="container">
+
+      <div class="section-title">
+        <span>PORTFOLIO</span>
+        <h2>Work Samples</h2>
+        <p>
+          Selected examples of my social media, graphic design and digital
+          content work.
+        </p>
+      </div>
+
+      <div class="work-grid">
+
+        <div class="work-card">
+          <div class="work-image">Social Media Post</div>
+          <div class="work-content">
+            <h3>Social Media Design</h3>
+            <p>Creative promotional post for social media.</p>
+          </div>
+        </div>
+
+        <div class="work-card">
+          <div class="work-image">Promotional Banner</div>
+          <div class="work-content">
+            <h3>Promotional Creative</h3>
+            <p>Marketing banner designed for online promotion.</p>
+          </div>
+        </div>
+
+        <div class="work-card">
+          <div class="work-image">Video Content</div>
+          <div class="work-content">
+            <h3>Short Video</h3>
+            <p>Edited short-form video for social media.</p>
+          </div>
+        </div>
+
+        <div class="work-card">
+          <div class="work-image">Poster Design</div>
+          <div class="work-content">
+            <h3>Poster</h3>
+            <p>Digital poster designed for promotional use.</p>
+          </div>
+        </div>
+
+        <div class="work-card">
+          <div class="work-image">Brand Content</div>
+          <div class="work-content">
+            <h3>Brand Creative</h3>
+            <p>Visual content created for brand communication.</p>
+          </div>
+        </div>
+
+        <div class="work-card">
+          <div class="work-image">Campaign Creative</div>
+          <div class="work-content">
+            <h3>Campaign Design</h3>
+            <p>Creative visual prepared for a digital campaign.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+
+      <div class="section-title">
+        <span>EXPERIENCE</span>
+        <h2>Internship & Experience</h2>
+        <p>
+          My practical experience in social media and digital content.
+        </p>
+      </div>
+
+      <div class="experience">
+
+        <div class="experience-item">
+          <h3>Social Media & Digital Content</h3>
+
+          <div class="date">
+            Internship / Professional Experience
+          </div>
+
+          <ul>
+            <li>Created social media posts and promotional graphics.</li>
+            <li>Edited short-form videos and digital content.</li>
+            <li>Supported social media page management.</li>
+            <li>Created banners and promotional materials.</li>
+            <li>Responded to customer messages and online inquiries.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+
+      <div class="section-title">
+        <span>TOOLS & SKILLS</span>
+        <h2>Creative Toolkit</h2>
+        <p>
+          Tools and skills I use to create digital content.
+        </p>
+      </div>
+
+      <div class="skills">
+
+        <span class="skill">Canva</span>
+        <span class="skill">CapCut</span>
+        <span class="skill">VN Editor</span>
+        <span class="skill">Adobe Photoshop</span>
+        <span class="skill">Adobe Illustrator</span>
+        <span class="skill">Adobe Creative Suite</span>
+        <span class="skill">Graphic Design</span>
+        <span class="skill">Video Editing</span>
+        <span class="skill">Content Creation</span>
+        <span class="skill">Social Media Management</span>
+        <span class="skill">Digital Marketing</span>
+        <span class="skill">Facebook</span>
+        <span class="skill">Instagram</span>
+        <span class="skill">TikTok</span>
+        <span class="skill">YouTube</span>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section id="certificates">
+    <div class="container">
+
+      <div class="section-title">
+        <span>CERTIFICATES</span>
+        <h2>Certificates & Training</h2>
+        <p>
+          Professional learning and training relevant to my skills.
+        </p>
+      </div>
+
+      <div class="cert-grid">
+
+        <div class="cert-card">
+          <div class="cert-icon">🏆</div>
+          <h3>IT Office Course Training</h3>
+          <p>Ace Connect Institute, Multan</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🎨</div>
+          <h3>Graphic Design</h3>
+          <p>Certificate / Training</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">📱</div>
+          <h3>Social Media Training</h3>
+          <p>Certificate / Training</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATFORMS -->
+  <section>
+    <div class="container">
+
+      <div class="section-title">
+        <span>PLATFORMS</span>
+        <h2>Where I Create</h2>
+      </div>
+
+      <div class="platforms">
+        <span class="platform">Facebook</span>
+        <span class="platform">Instagram</span>
+        <span class="platform">TikTok</span>
+        <span class="platform">YouTube</span>
+        <span class="platform">LinkedIn</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+
+      <div class="contact-box">
+
+        <div class="section-title" style="margin-bottom: 25px;">
+          <span style="color:#c4b5fd;">LET'S CONNECT</span>
+          <h2 style="color:white;">Have a project in mind?</h2>
+        </div>
+
+        <p>
+          I'm open to social media, content creation, graphic design and
+          digital content opportunities.
+        </p>
+
+        <div class="contact-links">
+
+          <a href="mailto:YOUR_EMAIL@gmail.com">
+            Email
+          </a>
+
+          <a href="https://www.linkedin.com/" target="_blank">
+            LinkedIn
+          </a>
+
+          <a href="https://www.facebook.com/" target="_blank">
+            Facebook
+          </a>
+
+          <a href="https://www.instagram.com/" target="_blank">
+            Instagram
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      © 2026 Asad Javed. Social Media & Digital Content Portfolio.
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+      link.addEventListener("click", function() {
+        document.getElementById("navLinks").classList.remove("active");
+      });
+    });
+  </script>
+
+</body>
+          </html>
